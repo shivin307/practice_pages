@@ -1,18 +1,28 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  // Dummy data for demonstration
-  RxList<String> items = List.generate(10, (index) => 'Item $index').obs;
+  final RxList<String> items = <String>[].obs;
 
-  // Simulate loading more items
+  @override
+  void onInit() {
+    super.onInit();
+    // Initialize your items or load initial data
+    loadItems();
+  }
+
+  void loadItems() {
+    // Simulating loading items from a data source
+    items.addAll(List<String>.generate(10, (index) => 'Item $index'));
+  }
+
   void loadMoreItems() {
-    // Simulate API call or loading process
-    Future.delayed(Duration(seconds: 2), () {
-      // Add more items to the list
-      items.addAll(List.generate(5, (index) => 'New Item ${items.length + index}'));
+    // Simulating loading more items
+    items.addAll(List<String>.generate(5, (index) => 'More Item ${items.length + index}'));
+  }
 
-      // Update the UI
-      update();
-    });
+  void refreshItems() {
+    // Simulating refreshing items
+    items.clear();
+    loadItems();
   }
 }
