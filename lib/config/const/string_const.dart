@@ -56,6 +56,16 @@ class StringConsts {
   static const String kContactNo = 'Contact No.';
   static const String kEmailId = 'E-mail Id';
   static const String kReportingTime = 'Reporting Time';
+  static const String kPassenger = 'Passenger';
+  static const String kGenderAge = 'Gender/Age';
+  static const String kType = 'Type';
+  static const String kClass = 'Class';
+  static const String kSeatNo = 'Seat no.';
+  static const String kStatus = 'Status';
+  static const String kSeatFare = 'Seat Fare';
+  static const String kVehicleCharges = 'Vehicle Charges';
+  static const String kFeeAndSurcharge = 'Fee & Surcharge';
+  static const String kFreeCancellation = 'Free Cancellation';
 
   /// FERRY selection
   static const String kDeparture = "Departure";
